@@ -1,0 +1,194 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-50 text-gray-900 min-h-screen;
+  }
+
+  h1 {
+    @apply text-3xl font-bold text-gray-900 mb-4;
+  }
+
+  h2 {
+    @apply text-2xl font-semibold text-gray-800 mb-3;
+  }
+
+  h3 {
+    @apply text-xl font-medium text-gray-700 mb-2;
+  }
+}
+
+@layer components {
+  /* Layout */
+  .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .grid-layout {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6;
+  }
+
+  /* Buttons */
+  .btn {
+    @apply px-4 py-2 rounded-md font-medium transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+
+  .btn-primary {
+    @apply bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500;
+  }
+
+  .btn-secondary {
+    @apply bg-gray-200 text-gray-800 hover:bg-gray-300 focus:ring-gray-500;
+  }
+
+  .btn-danger {
+    @apply bg-red-600 text-white hover:bg-red-700 focus:ring-red-500;
+  }
+
+  /* Cards */
+  .card {
+    @apply bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-200;
+  }
+
+  .card-header {
+    @apply border-b border-gray-200 pb-4 mb-4;
+  }
+
+  .card-body {
+    @apply space-y-4;
+  }
+
+  /* Forms */
+  .form-group {
+    @apply mb-4;
+  }
+
+  .form-label {
+    @apply block text-sm font-medium text-gray-700 mb-1;
+  }
+
+  .input {
+    @apply w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent;
+  }
+
+  .select {
+    @apply w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent;
+  }
+
+  /* Badges */
+  .badge {
+    @apply px-2 py-1 rounded-full text-xs font-medium inline-flex items-center;
+  }
+
+  .badge-story {
+    @apply bg-blue-100 text-blue-800;
+  }
+
+  .badge-bug {
+    @apply bg-red-100 text-red-800;
+  }
+
+  .badge-task {
+    @apply bg-green-100 text-green-800;
+  }
+
+  .badge-high {
+    @apply bg-red-100 text-red-800;
+  }
+
+  .badge-medium {
+    @apply bg-yellow-100 text-yellow-800;
+  }
+
+  .badge-low {
+    @apply bg-green-100 text-green-800;
+  }
+
+  /* Navigation */
+  .nav {
+    @apply bg-white shadow-sm;
+  }
+
+  .nav-item {
+    @apply px-4 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-md;
+  }
+
+  .nav-item.active {
+    @apply bg-blue-50 text-blue-700;
+  }
+
+  /* Issue List */
+  .issue-list {
+    @apply space-y-4;
+  }
+
+  .issue-item {
+    @apply bg-white rounded-lg shadow p-4 hover:shadow-md transition-shadow duration-200 cursor-pointer;
+  }
+
+  .issue-header {
+    @apply flex justify-between items-start mb-2;
+  }
+
+  .issue-title {
+    @apply text-lg font-medium text-gray-900;
+  }
+
+  .issue-meta {
+    @apply flex items-center space-x-2 text-sm text-gray-500;
+  }
+
+  /* Sprint Board */
+  .sprint-board {
+    @apply grid grid-cols-1 md:grid-cols-3 gap-4;
+  }
+
+  .sprint-column {
+    @apply bg-gray-50 rounded-lg p-4;
+  }
+
+  .sprint-column-header {
+    @apply font-medium text-gray-700 mb-3;
+  }
+
+  /* Modal */
+  .modal-overlay {
+    @apply fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center;
+  }
+
+  .modal {
+    @apply bg-white rounded-lg shadow-xl max-w-lg w-full mx-4;
+  }
+
+  .modal-header {
+    @apply px-6 py-4 border-b border-gray-200;
+  }
+
+  .modal-body {
+    @apply px-6 py-4;
+  }
+
+  .modal-footer {
+    @apply px-6 py-4 border-t border-gray-200 flex justify-end space-x-3;
+  }
+
+  /* Loading States */
+  .loading {
+    @apply animate-pulse bg-gray-200 rounded;
+  }
+
+  /* Empty States */
+  .empty-state {
+    @apply text-center py-8;
+  }
+
+  .empty-state-icon {
+    @apply mx-auto h-12 w-12 text-gray-400;
+  }
+
+  .empty-state-text {
+    @apply mt-2 text-sm text-gray-500;
+  }
+} 
